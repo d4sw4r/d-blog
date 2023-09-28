@@ -1,0 +1,28 @@
+api_comment_api:
+    resource: "@ApiBundle/Controller/CommentRESTController.php"
+    type:   rest
+    prefix:   /api
+
+testing:
+    resource: "@TestingBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+api:
+    resource: "@ApiBundle/Resources/config/routing.yml"
+    prefix: /api
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc
+
+fos_oauth_server_token:
+    resource: "@FOSOAuthServerBundle/Resources/config/routing/token.xml"
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"    
+
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin

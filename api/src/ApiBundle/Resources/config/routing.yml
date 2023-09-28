@@ -1,0 +1,11 @@
+api_posts:
+    type: rest
+    resource: ApiBundle\Controller\PostRESTController
+
+api_tags:
+    type: rest
+    resource: ApiBundle\Controller\TagRESTController 
+
+api_contacts:
+    type: rest
+    resource: ApiBundle\Controller\ContactRESTController           

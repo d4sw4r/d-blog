@@ -1,0 +1,18 @@
+cache:
+  paths:
+  - api/vendor/
+
+before_script:
+# Install composer dependencies
+- curl -sS https://getcomposer.org/installer | php
+- php composer.phar install -d api/
+
+test:code:
+  script:
+  - phpunit --configuration api/phpunit.xml
+  - phploc api/src/
+  - php -l api/src/
+  - pdepend --summary-xml=metric.xml api/src/
+  - phpcpd api/src/
+
+

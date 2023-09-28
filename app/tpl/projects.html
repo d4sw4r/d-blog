@@ -1,0 +1,42 @@
+<div ng-controller="projectsCtrl" layout="row">
+    <div flex="10"></div>
+    <div flex="60" class="main" md-ink-ripple="{{ randomColor() }}">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+
+                <h2>
+          <span>Projects</span>
+        </h2>
+                <span flex></span>
+               
+            </div>
+        </md-toolbar>
+        <div layout="column">
+            <div flex="20" ng-repeat="project in projects">
+                <md-card>
+                	<md-card-header>
+                		<md-card-avatar>
+                    	<ng-letter-avatar data="{{project.name}}" shape="round" charCount="2" class="md-user-avatar">{{project.name}}</ng-letter-avatar> 
+                    </md-card-avatar>
+                   <md-card-header-text>
+                    <h2 class="md-title">{{project.name}}</h2>
+                    <p class="md-subhead">{{project.description}}</p>
+                </md-card-header-text>
+                </md-card-header>
+                    <md-card-content>
+                    <br>
+                    <div layout="row">
+                        <p class="md-caption"> created: {{project.created_at | date}}</p><div flex></div><p class="md-caption">last activity: {{project.last_activity_at | date}} </p>
+                        </div>
+                        </md-card-content2>
+                        <md-card-footer>
+                             <md-button class="md-raised md-primary" href="{{project.web_url}}">Go to Project</md-button>
+                            <!-- <md-button class="md-raised md-warn" href="{{project.http_url_to_repo}}">Clone</md-button> -->
+                             <md-button class="md-raised md-warn" href="" ng-click="showAlert(project)">Clone</md-button>
+                        </md-card-footer>
+                </md-card>
+            </div>
+        </div>       
+    </div>
+    <div flex="10"></div>
+</div>

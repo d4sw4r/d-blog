@@ -1,0 +1,42 @@
+
+
+<div ng-controller="contactCtrl" layout="row">
+   <div flex="10"></div>
+    <div flex="80">
+              <md-toolbar>
+            <div class="md-toolbar-tools">
+
+                <h2>
+          <span>Contact</span>
+        </h2>
+                <span flex></span>
+               
+            </div>
+        </md-toolbar>
+<md-card>
+ <md-card-content>
+   <div layout-gt-sm="row">
+   <md-input-container>
+  <label>Name</label>
+  <input ng-model="name" type="text">
+</md-input-container>
+</div>
+<div layout-gt-sm="row">
+   <md-input-container>
+  <label>E-Mail</label>
+  <input ng-model="email" type="text">
+</md-input-container>
+</div>
+<div layout-gt-sm="row">
+<md-input-container>
+  <label>Text</label>
+  <textarea ng-model="txt" md-maxlength="250"></textarea>
+</md-input-container>
+</div>
+<md-button class="md-raised" ng-click="sendMail()">Send</md-button>
+ </md-card-content>
+</md-card>
+</div>
+ <div flex="10"></div>
+
+</div>

@@ -1,0 +1,51 @@
+ /* The starting CSS styles for the enter animation */
+.fade.ng-enter {
+  transition:0.5s linear all;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fade.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.gridListdemoBasicUsage md-grid-list {
+  margin: 8px; }
+.gridListdemoBasicUsage .gray {
+  background: #f5f5f5; }
+.gridListdemoBasicUsage .green {
+  background: #b9f6ca; }
+.gridListdemoBasicUsage .yellow {
+  background: #ffff8d; }
+.gridListdemoBasicUsage .blue {
+  background: #84ffff; }
+.gridListdemoBasicUsage .purple {
+  background: #b388ff; }
+.gridListdemoBasicUsage .red {
+  background: #ff8a80; }
+.gridListdemoBasicUsage md-grid-tile {
+  transition: all 400ms ease-out 50ms; }
+
+ .tagcloud a{
+  padding: 5px;
+  text-decoration: none;
+ }
+.tagcloud .tag1{ font-size:1em; color:#555555; line-height:1em; }
+.tagcloud .tag2{ font-size:1.2em; color:#606060; line-height:1em; }
+.tagcloud .tag3{ font-size:1.4em; color:#808080; line-height:1em; }
+
+.tagcloud a:hover{
+ text-decoration:underline;
+}
+
+.navi a{
+  color: rgb(255,87,34);
+  text-decoration:underline;
+
+}
+.navi a:hover{
+  color: black;
+  text-decoration:underline;
+
+}
+

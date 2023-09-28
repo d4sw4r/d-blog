@@ -1,0 +1,64 @@
+    <!doctype html>
+    <html ng-app="myApp">
+      <head>
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+      </head>
+      <body>
+<div ng-controller="MainCtrl">
+ <md-toolbar>
+                <div class="md-toolbar-tools">
+                        <h2>
+                                <span>eXabauds development</span>
+                        </h2>
+                <span flex></span>
+                </div>
+        </md-toolbar>
+</div>
+<div layout="row" layout-align="center" class="navi">
+<p class="well">
+  <a href="#/">Home</a> | <a href="#/blog">Blog</a> | <a href="#/about">About</a> | <a href="#/showroom">Showroom</a> | <a href="#/contact">Contact</a> | <a href="#/projects">Projects</a>
+</p>
+</div>
+<div layout="row" ng-controller="NavCtrl">
+  <md-sidenav md-component-id="left" class="md-sidenav-left">
+    <p class="well">
+  <a href="#/">Start</a> | <a href="#/about">Über</a>
+</p>
+  </md-sidenav>
+  <md-content>
+    <md-button ng-click="openLeftMenu()">
+      Open Left Menu
+    </md-button>
+  </md-content>
+</div>  
+<md-content>
+<div ng-view class="fade"></div>
+</md-content>
+
+
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <md-button aria-label="Impressum" href="#/impressum">
+          Impressum
+        </md-button>
+        <span flex></span>
+          <small>&copy; exabauds.com</small>   
+      </div>
+    </md-toolbar>
+
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+  <script src="bower_components/angular-material/angular-material.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/ngletteravatar/dist/ngletteravatar.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+
+  <script src="all.js"></script>
+      </body>
+    </html>
+
+

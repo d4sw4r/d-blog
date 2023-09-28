@@ -1,0 +1,63 @@
+<div ng-controller="showPostCtrl" layout="row">
+    <div flex="10"></div>
+    <div flex="60">
+
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+
+                      <md-button aria-label="Go Back" href="#/blog">
+                         Go Back
+                       </md-button>
+                      <span flex></span>
+                        <h2>
+                          <span>{{post.title}}</span>
+                        </h2>
+                        <span flex></span>
+                      
+                    </div>
+                </md-toolbar>
+                <md-card>
+                    <md-card-content>
+                        <p>{{post.author}}</p>
+                        <br>
+                        <p>{{post.content}}</p>
+                        <br>
+                        <br>
+                        <p>{{post.tag.name}}</p>
+                    </md-card-content>
+                    <md-card-footer>
+                        <md-button class="md-raised md-primary" ng-click="showPost()">Read more</md-button>
+                        <md-button class="md-raised md-warn" ng-click="rss()">RSS</md-button>
+                    </md-card-footer>
+                </md-card>
+                 <md-card ng-repeat="comment in post.comments">
+                    <md-card-content>
+                      <md-content align="center" ng-if="isLoading">
+                          <md-progress-circular md-mode="indeterminate" md-diameter="96"></md-progress-circular>
+                      </md-content>
+                      <div ng-show="!isLoading">
+                        <p>{{comment.name}}</p>
+                        {{comment.email}}
+                        {{comment.website}}
+                        {{comment.content}}
+                    </div>
+            </md-card-content>
+        </md-card>
+    </div>
+   
+    <div flex="20">
+        <md-card>
+            <md-card-content>
+                <md-content align="center" ng-if="isLoading">
+                    <md-progress-circular md-mode="indeterminate" md-diameter="96"></md-progress-circular>
+                </md-content>
+                <div ng-show="!isLoading">
+                    <p>Tags:</p>
+                    <tagcloud value="tags" class="tagcloud" />
+                </div>
+            </md-card-content>
+        </md-card>
+       
+    </div>
+    <div flex="10"></div>
+</div>
